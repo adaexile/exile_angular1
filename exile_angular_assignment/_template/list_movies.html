@@ -1,0 +1,37 @@
+<!--<div>-->
+    <!--<ul>-->
+        <!--<li ng-repeat="x in mlc.getAllMovies() | orderBy : 'released':true">-->
+            <!--<H3>{{x.name }}</H3>Ratings : {{x.ratings}}-->
+            <!--<p>Description : {{x.description }}</p>-->
+            <!--<p>Released : {{x.released }}</p>-->
+            <!--<p>Language : {{x.language }}</p>-->
+            <!--{{x.characters}}-->
+        <!--</li>-->
+    <!--</ul>-->
+<!--</div>-->
+<div class="container">
+    <div class="text-right"><button ui-sref="add()"> Add movie</button></div>
+<ul class="list-group">
+    <li ng-repeat="x in mlc.getAllMovies() | orderBy : 'released':true" class="list-group-item">
+        <div class="row">
+            <div class="col-sm-4">
+                <h3>{{x.name}}({{x.released}})</h3>
+            </div>
+            <div class="col-sm-4">
+				<ul class="list-inline">
+				<li ng-repeat='n in mlc.getTimes(x.ratings) track by $index'>
+					<h3><span class="glyphicon glyphicon-star"></span></h3>
+                </li>
+            </div>
+            <div class="row">
+                <div class="col-sm-8">
+                    <p>Description : {{x.description }}</p>
+                    </div>
+                </div>
+            <button ui-sref="single({id : {{x.id}}})"> details</button>
+            </div>
+        </div>
+    </li>
+</ul>
+
+</div>

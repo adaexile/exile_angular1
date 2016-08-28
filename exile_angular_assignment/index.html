@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" href="vendor/css/bootstrap.css">
+    <link rel="stylesheet" href="vendor/css/main.css">
+</head>
+<body ng-controller="ApplicationController as main">
+<div class="container">
+    <div class="index-header">
+        <h3 class="align-center">{{main.title}}</h3>
+    </div>
+
+    <ui-view></ui-view>
+</div>
+<script src="vendor/js/angular.js"></script>
+<script src="vendor/js/angular-ui-router.js"></script>
+<script src="vendor/js/jquery-1.12.4.js"></script>
+<script src="vendor/js/bootstrap.js"></script>
+<script src="app.js"></script>
+<script src="_service/movie_service.js"></script>
+<script src="_controller/MovieListController.js"></script>
+<script src="_controller/SingleMovieController.js"></script>
+<script src="_controller/createMovieController.js"></script>
+<script src="_directive/directive1.js"></script>
+<script src="_directive/charactor_directive.js"></script>
+<script src="_router/routing.js"></script>
+</body>
+</html>

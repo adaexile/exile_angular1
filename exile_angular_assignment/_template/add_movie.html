@@ -1,0 +1,51 @@
+<div class="container" ng-controller="AddMovieController as amc">
+    <div class="form-horizontal">
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="title">Name:</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="title" placeholder="Enter title" ng-model="amc.movie.name" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="desc">Description:</label>
+            <div class="col-sm-6">
+                <textarea class="form-control" id="desc" placeholder="Enter description" ng-model="amc.movie.description" required></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="released">Released year:</label>
+            <div class="col-sm-6">
+                <input type="Number" class="form-control" id="released" placeholder="Enter released year" min="1900" max="2020" ng-model="amc.movie.released" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="director">Directed By:</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="director" placeholder="Enter title" ng-model="amc.movie.director" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="language">Language</label>
+            <div class="col-sm-6">
+                <input type="text" class="form-control" id="language" placeholder="Enter language" ng-model="amc.movie.language" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Rating:</label>
+            <div class="col-sm-6">
+                <input type="Number" class="form-control" id="email" placeholder="Rating" min="0" max="5" ng-model="amc.movie.ratings" required>
+            </div>
+        </div>
+
+        <div character charactors="characters" add="addItem(character)" ></div>
+        <!--<div character item1="customers" add="addItem(character)"></div>-->
+
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="button" class="btn btn-default" ng-click="amc.addMovie()">Add Movie</button>
+            </div>
+        </div>
+
+    </div>
+</div>
